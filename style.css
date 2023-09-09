@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',
+        Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+.primeira-seção-cabeçalho {
+    height: 16vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+    margin: 0;
+    padding-left: 10px;
+    color: rgb(127, 173, 251);
+}
+
+.sessao_botao {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.botao_voltar {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(127, 173, 251);
+    color: white;
+    box-shadow: 3px 3px 3px rgb(107, 107, 107);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px 21px 15px 21px;
+}
+
+.botao_voltar:active {
+    box-shadow: 0 0 0 0 rgb(107, 107, 107), inset 2px 2px 2px rgb(118, 155, 218);
+}
+
+.segunda-seção-cabeçalho {
+    background-color: rgb(127, 173, 251);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 4px 4px 12px rgb(107, 107, 107);
+}
+
+.buscar {
+    padding: 20px 0px;
+    margin-left: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+#buscarInput {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 8px;
+    height: 40px;
+    width: 250px;
+    margin-right: 5px;
+    box-shadow: 3px 3px 3px rgb(107, 107, 107);
+}
+
+.buscar button {
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(57, 57, 57);
+    color: white;
+    box-shadow: 3px 3px 3px rgb(107, 107, 107);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buscar button:active {
+    box-shadow: 0 0 0 0 rgb(57, 57, 57), inset 2px 2px 2px rgb(57, 57, 57);
+}
+
+.highlight {
+    background-color: rgb(127, 173, 251);
+}
+
+.seções {
+    margin-right: 10px;
+}
+
+.seções a {
+    font-size: 1.1rem;
+    padding: 8px;
+    color: black;
+    font-weight: 500;
+    transition: transform 0.3s, top 0.3s;
+}
+
+.seções a:hover {
+    font-size: 1.2;
+    transform: scale(1.2);
+    position: relative;
+    top: -5px;
+    font-weight: 600;
+}
+
+/* MAIN */
+
+.primeira-seção {
+    background: url("professor.png") no-repeat;
+    background-size: cover;
+    background-color: rgba(10, 23, 55, 1, 5);
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: "titulo ." "texto ." "linha_do_tempo linha_do_tempo";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.primeira-seção h2 {
+    grid-area: titulo;
+    padding: 50px 0px 0px 50px;
+    font-size: 4.0rem;
+    color: white;
+}
+
+.descrição {
+    margin-top: 20px;
+    grid-area: texto;
+    padding-left: 50px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.linha_do_tempo {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 50px 20px 10px 20px;
+    grid-area: linha_do_tempo;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.tempo {
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 1.8);
+    padding: 20px 25px 20px 25px;
+    margin: 0px 20px 0px 20px;
+    background-color: white;
+}
+
+.tempo img {
+    max-width: 60px;
+}
+
+.tempo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.tempo p {
+    font-size: 1.0rem;
+    color: black;
+    text-align: center;
+}
+
+.segunda_seção {
+    padding: 34vh 7vh 9vh 8vh;
+
+    display: grid;
+    grid-template-areas: "img_jovem titulo_jovem" "img_jovem texto_jovem";
+    grid-template-columns: 0, 5fr 1fr;
+    grid-template-rows: 40% 60%;
+}
+
+.segunda_seção img {
+    grid-area: img_jovem;
+    border: 5px solid black;
+    border-radius: 50%;
+    max-width: 33vw;
+    position: relative;
+    animation: flutua 2s ease-out infinite alternate;
+}
+
+@keyframes flutua {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 25px;
+    }
+}
+
+.segunda_seção h3 {
+    grid-area: titulo_jovem;
+    font-size: 2.0rem;
+    margin: 110px 0px 0px 40px;
+}
+
+.segunda_seção p {
+    grid-area: texto_jovem;
+    font-size: 1.3rem;
+    margin: 0px 0px 0px 40px;
+}
+
+.terceira_seção {
+    background: url("fundo-branco.jpg") no-repeat;
+    background-size: cover;
+    height: 113vh;
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+    display: grid;
+    grid-template-areas: "profissões profissões profissões" "professor1 professor2 psicólogo" "realidade realidade realidade" "texto_realidade texto_realidade texto_realidade";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0, 5fr 1fr 0, 5fr 1fr;
+}
+
+.terceira_seção h3 {
+    grid-area: profissões;
+    font-size: 2.0rem;
+    padding-top: 40px;
+}
+
+.terceira_seção h4 {
+    margin-bottom: 9px;
+}
+
+#professor1 {
+    grid-area: professor1;
+}
+
+#professor2 {
+    grid-area: professor2;
+}
+
+#psicólogo {
+    grid-area: psicólogo;
+}
+
+#professor1,
+#professor2,
+#psicólogo {
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 1.8);
+    padding: 20px 40px 0px 40px;
+    margin: 20px 30px 0px 30px;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+#realidade {
+    grid-area: realidade;
+}
+
+#texto_realidade {
+    grid-area: texto_realidade;
+    font-size: 1.3rem;
+    margin: 0px 40px 30px 40px;
+}
+
+.quarta_seção {
+    text-align: center;
+    padding: 30px 40px 40px 40px;
+    border-bottom: 2px solid black;
+    background: linear-gradient(-45deg, #b2dbff, #ffffff, #b2dbff);
+
+    display: grid;
+    grid-template-areas: "âmbito âmbito âmbito" "privado divisor público";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% 90%;
+}
+
+.quarta_seção h3 {
+    grid-area: âmbito;
+    font-size: 2.0rem;
+}
+
+.privado {
+    grid-area: privado;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 1.8);
+    height: 65vh;
+    width: 65vh;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 50%;
+    padding: 40px;
+    margin: 40px 10px 50px 10px;
+    background-color: white;
+}
+
+.público {
+    grid-area: público;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 1.8);
+    height: 65vh;
+    width: 65vh;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 50%;
+    padding: 40px;
+    margin: 40px 10px 50px 10px;
+    background-color: white;
+}
+
+.quarta_seção h4 {
+    grid-area: privado;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+.quarta_seção p {
+    font-size: 1.3rem;
+    padding: 0px 20px 20px 20px;
+}
+
+.quarta_seção h5 {
+    grid-area: divisor;
+    font-size: 5.5rem;
+    margin-top: 200px;
+    color: rgb(127, 173, 251);
+}
+
+.quinta_seção {
+    text-align: center;
+    margin: 9vh 5vh 5vh 5vh;
+}
+
+.quinta_seção h3 {
+    font-size: 2.0rem;
+}
+
+.quinta_seção p {
+    font-size: 1.5rem;
+    margin: 4vh 10vh 0vh 10vh;
+}
+
+/* -----------------FOOTER------------------ */
+
+footer {
+    margin-top: 80px;
+}
+
+.primeira_seção-rodapé {
+    background-color: rgb(127, 173, 251);
+    color: white;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ol {
+    list-style: none;
+}
+
+li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+ol li a:hover {
+    padding-left: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.principais {
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.principais::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: white;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.segunda_seção-rodapé {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
